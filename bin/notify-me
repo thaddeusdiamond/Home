@@ -1,0 +1,5 @@
+#!/bin/sh
+"$@"
+status=$?
+xmessage -center "$(basename $1) done, status $status"
+exit $status
