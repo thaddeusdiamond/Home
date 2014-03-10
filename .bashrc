@@ -110,7 +110,9 @@ fi
 export JAVA_HOME=/usr/lib/jvm/default-java
 export EDITOR="vim -O"
 export PS1='hacker:\w\$ '
-export MY_WORKSPACE=~/workspace
+
+###### HADAPT INFO ######
+export HADAPT_SRCROOT=~/workspace/hadapt/hadapt
 
 # Py26 virtual env
 export VIRTUAL_ENV_DISABLE_PROMPT=true
