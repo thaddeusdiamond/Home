@@ -109,15 +109,9 @@ fi
 ###### CUSTOM SHELL VARIABLES ######
 export JAVA_HOME=/usr/lib/jvm/default-java
 export EDITOR="vim -O"
-export PS1='hacker:\w\$ '
+export PS1='[$(date +%H:%M:%S)] hacker:\w\$ '
 
 ###### HADAPT INFO ######
 export HADAPT_SRCROOT=~/workspace/hadapt/hadapt
-
-# Py26 virtual env
-export VIRTUAL_ENV_DISABLE_PROMPT=true
-source /home/thaddeusdiamond/py26/bin/activate
-
-# Cache URL sources for faster devenv boot
-# export http_proxy=http://localhost:8123
-# offline caching -> /usr/bin/curl -m 5 -d 'proxyOffline=true' http://localhost:8123/polipo/config?
+export PATH=$PATH:$HADAPT_SRCROOT/bin
+source $HADAPT_SRCROOT/bin/hfab-autocomplete.sh
