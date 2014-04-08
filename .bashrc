@@ -109,7 +109,7 @@ fi
 ###### CUSTOM SHELL VARIABLES ######
 export JAVA_HOME=/usr/lib/jvm/default-java
 export EDITOR="vim -O"
-export PS1='[$(date +%H:%M:%S)] hacker:\w\$ '
+export PS1='[$(date +"%H:%M:%S %m/%d")] hacker:\w\$ '
 
 ###### HADAPT INFO ######
 export HADAPT_SRCROOT=~/workspace/hadapt/hadapt
