@@ -2,22 +2,23 @@
   name = Thaddeus Diamond
   email = thaddeus@hadapt.com
 [alias]
-  co = checkout
-  outgoing = !sh -c \"git log --reverse --oneline origin/${1:-master}..$2\"
-  out = !git outgoing
-  incoming = "!sh -c \"git fetch; git log --reverse --oneline $2..origin/${1:-master}\""
-  in = !git incoming
-  backout = revert -n
-  stat = status
-  export = show
-  glog = log --oneline --graph --date-order --decorate --all --pretty=format:'%C(yellow)%h %C(auto)%d %Creset%s %Cgreen%aN'
-  meld = difftool --dir-diff -y
-  bc = branch-compare
-	slog = log --show-signature
-  hpush = "!sh -c \"_CURBRANCH=`git name-rev --name-only HEAD` && git co master && git pull && git co _push && git rebase master && git cherry-pick $1 && push -M -i $2 -y && git co \\$_CURBRANCH && git rebase master\""
-  refresh = commit --amend -C HEAD
-	cp = cherry-pick
+    co = checkout
+    outgoing = !sh -c \"git log --reverse --oneline origin/${1:-master}..$2\"
+    out = !git outgoing
+    incoming = "!sh -c \"git fetch; git log --reverse --oneline $2..origin/${1:-master}\""
+    in = !git incoming
+    backout = revert -n
+    stat = status
+    export = show
+    glog = log --oneline --graph --date-order --decorate --all --pretty=format:'%C(yellow)%h %C(auto)%d %Creset%s %Cgreen%aN'
+    meld = difftool --dir-diff -y
+    bc = branch-compare
+    slog = log --show-signature
+    sync = "!sh -c \"_CURBRANCH=`git name-rev --name-only HEAD` && git co ${1:-master} && git pull && git co \\$_CURBRANCH && git rebase ${1:-master}\""
+    hpush = "!sh -c \"_CURBRANCH=`git name-rev --name-only HEAD` && git co ${3:-master} && git pull && git co _push && git reset --hard ${3:-master} && git cherry-pick $1 && push -b ${3:-master} -M -i $2 -y && git co \\$_CURBRANCH && git rebase ${3:-master}\""
+    refresh = commit --amend -C HEAD
+    cp = cherry-pick
 [diff]
-  tool = meld
+    tool = meld
 [push]
-	default = simple
+    default = simple
