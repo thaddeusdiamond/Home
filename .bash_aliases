@@ -217,3 +217,7 @@ function idea_repo_sync() {
   mv ${DST_REPO_ROOT}/${SRC_REPO_NAME}.iml ${DST_REPO_ROOT}/${DST_REPO_NAME}.iml
 }
 
+# Hadapt clusters
+function other() { hfab other ${*:-login}; }
+function slippery() { hfab slippery ${*:-login}; }
+function vagrant() { hfab vagrant ${*:-login}; }
