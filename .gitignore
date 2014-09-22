@@ -1,0 +1,5 @@
+# Explicitly add things to the working dir
+*
+.vim/.netrwhist
+.vim/bundle
+
