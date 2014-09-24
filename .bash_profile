@@ -12,7 +12,8 @@ export PATH
 export PATH="/opt/local/lib/postgresql93/bin:/opt/local/bin:/opt/local/sbin:$PATH"
 # Finished adapting your PATH environment variable for use with MacPorts.
 
-# Alias definitions.
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+# Bash RC (not called if on Mac OS X or .bash_profile exists)
+# See http://www.joshstaiger.org/archives/2005/07/bash_profile_vs.html
+if [ -f ~/.bashrc ]; then
+    . ~/.bashrc
 fi

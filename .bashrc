@@ -110,4 +110,6 @@ export PS1='[$(date +"%H:%M:%S %m/%d")] hacker:\w\$ '
 ###### HADAPT INFO ######
 export HADAPT_SRCROOT=~/workspace/hadapt/hadapt
 export PATH=$PATH:$HADAPT_SRCROOT/bin
-source $HADAPT_SRCROOT/bin/hfab-autocomplete.sh
+if [ -f $HADAPT_SRCROOT/bin/hfab-autocomplete.sh ]; then
+    . $HADAPT_SRCROOT/bin/hfab-autocomplete.sh
+fi
