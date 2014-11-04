@@ -41,9 +41,6 @@ nnoremap <C-i> i
 " Don't show extra help with NERDTree
 let NERDTreeMinimalUI=1
 
-" Insert Hadapt copyright quickly
-inoremap <C-h>  <C-O>oCopyright 2014, Hadapt, Inc. All rights reserved.<C-O>o
-
 " Quickly rebuild ctags
 command -nargs=1 Ctags !ctags -R -f ctags.out --c++-kinds=+p --fields=+iaS --extra=+q $1
 set tags+=ctags.out

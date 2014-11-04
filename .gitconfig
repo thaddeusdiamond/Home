@@ -1,6 +1,6 @@
 [user]
   name = Thaddeus Diamond
-  email = thaddeus@hadapt.com
+  email = thadd@amazon.com
 [alias]
     co = checkout
     outgoing = !sh -c \"git log --reverse --oneline origin/${1:-master}..$2\"
@@ -21,4 +21,4 @@
 [diff]
     tool = meld
 [push]
-    default = simple
+    default = upstream
