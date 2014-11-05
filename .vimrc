@@ -1,3 +1,6 @@
+" Hidden from Git
+source $HOME/.vimrc_hidden
+
 " Pathogen load
 filetype off
 
@@ -12,6 +15,7 @@ set tabstop=4
 set expandtab
 set shiftwidth=4
 set wrap
+set backspace=indent,eol,start
 
 " Dumps a shell's output into a buffer
 command! -complete=shellcmd -nargs=+ SB call s:RunShellCommand(<q-args>)

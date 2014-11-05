@@ -105,4 +105,9 @@ fi
 ###### CUSTOM SHELL VARIABLES ######
 export JAVA_HOME=/usr/lib/jvm/default-java
 export EDITOR="vim -O"
-export PS1='[$(date +"%H:%M:%S %m/%d")] hacker:\w\$ '
+
+# Hidden from Git
+source $HOME/.bashrc_hidden
+
+##### Update prompt (last in case any hidden commands mucked with it)
+export PS1='\[\033[32m\][$(date +"%H:%M:%S %m/%d")]\[\033[0m\] hacker:\w\$ '
