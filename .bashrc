@@ -102,6 +102,11 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
+# git autocompletion, it's awesome
+if [ -f ~/.git-completion.bash ]; then
+    . ~/.git-completion.bash
+fi
+
 ###### CUSTOM SHELL VARIABLES ######
 export JAVA_HOME=/usr/lib/jvm/default-java
 export EDITOR="vim -O"

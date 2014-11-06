@@ -18,7 +18,13 @@
     hpush = "!sh -c \"_CURBRANCH=`git name-rev --name-only HEAD` && git co ${3:-master} && git pull && git co _push && git reset --hard ${3:-master} && git cherry-pick $1 && push -b ${3:-master} -M -i $2 -y && git co \\$_CURBRANCH && git rebase ${3:-master}\""
     refresh = commit --amend -C HEAD
     cp = cherry-pick
+	dag = log --graph --format='format:%C(yellow)%h%C(reset) %C(blue)\"%an\" <%ae>%C(reset) %C(magenta)%ar%C(reset)%C(auto)%d%C(reset)%n%s' --date-order
 [diff]
     tool = meld
 [push]
     default = upstream
+[color]
+	ui = auto
+[core]
+	pager = less -FMRiX
+	excludesfile = /home/thadd/.config/git/excludes
