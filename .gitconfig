@@ -29,3 +29,5 @@
 	pager = less -FMRiX
 	excludesfile = /home/thadd/.config/git/excludes
 	editor = /home/thadd/bin/git-editor
+[include]
+    path = /home/thadd/.gitconfig_hidden
