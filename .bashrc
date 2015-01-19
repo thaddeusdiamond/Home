@@ -109,7 +109,8 @@ fi
 
 ###### CUSTOM SHELL VARIABLES ######
 export JAVA_HOME=/usr/lib/jvm/default-java
-export EDITOR="vim -O"
+export SPLITTABLE_EDITOR="vim -O"
+export EDITOR="vim"
 
 # Hidden from Git
 source $HOME/.bashrc_hidden
