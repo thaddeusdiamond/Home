@@ -1,0 +1,8 @@
+# Creates a set of files and opens them in your EDITOR.
+# Each file has a commit and the diff for a specific file (or the whole repo
+# if no argument was given).
+
+TEMP_DIR=`mktemp -d`
+git log -p $1 | awk -v temp_dir=$TEMP_DIR '{print RS $0 > temp_dir "/patch_" NR}' RS='\ncommit '
+$EDITOR `find $TEMP_DIR -type f | sort -t '_' -k2n`
+rm -fr $TEMP_DIR
