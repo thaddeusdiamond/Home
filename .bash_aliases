@@ -216,3 +216,24 @@ function idea_repo_sync() {
 
   mv ${DST_REPO_ROOT}/${SRC_REPO_NAME}.iml ${DST_REPO_ROOT}/${DST_REPO_NAME}.iml
 }
+
+# Go into each subdirectory and print out the difference in git branch
+git-recursive() {
+  for i in `ls`
+  do
+    cd $i
+    echo $i
+    echo =======
+    git $@
+    echo
+    cd ..
+  done
+}
+
+git-recursive-out() {
+  git-recursive out "$@"
+}
+
+git-recursive-stat() {
+  git-recursive stat "$@"
+}
