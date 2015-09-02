@@ -224,7 +224,7 @@ git-recursive() {
     cd $i
     echo $i
     echo =======
-    git $@
+    git "$@"
     echo
     cd ..
   done
