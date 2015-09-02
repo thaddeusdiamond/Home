@@ -2,7 +2,7 @@
 
 GIT_MSG=$1
 
-TMP_FILE=`mktemp`
+TMP_FILE=`mktemp /tmp/git-commit-XXXX`
 git diff HEAD --cached > $TMP_FILE
 
 ${SPLITTABLE_EDITOR:-$EDITOR} $GIT_MSG $TMP_FILE
