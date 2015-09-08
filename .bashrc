@@ -116,4 +116,4 @@ export EDITOR="vim"
 source $HOME/.bashrc_hidden
 
 ##### Update prompt (last in case any hidden commands mucked with it)
-export PS1='\[\033[32m\][$(date +"%H:%M:%S %m/%d")]\[\033[0m\] hacker:\w\$ '
+export PS1='\[\033[32m\][$(date +"%H:%M:%S %m/%d") $(hostname -s)]\[\033[0m\] hacker:\w\$ '
