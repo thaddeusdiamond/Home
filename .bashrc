@@ -108,7 +108,7 @@ if [ -f ~/.git-completion.bash ]; then
 fi
 
 ###### CUSTOM SHELL VARIABLES ######
-export JAVA_HOME=/usr/lib/jvm/default-java
+export JAVA_HOME=/usr/local/lib/jvm/default-java
 export SPLITTABLE_EDITOR="vim -O"
 export EDITOR="vim"
 
