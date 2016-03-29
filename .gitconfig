@@ -28,7 +28,7 @@
 	ui = auto
 [core]
 	pager = less -FMRiX
-	excludesfile = /home/thadd/.config/git/excludes
-	editor = /home/thadd/bin/git-editor
+	excludesfile = /Users/thaddeusdiamond/.config/git/excludes
+	editor = /Users/thaddeusdiamond/bin/git-editor
 [include]
-    path = /home/thadd/.gitconfig_hidden
+    path = /Users/thaddeusdiamond/.gitconfig_hidden
